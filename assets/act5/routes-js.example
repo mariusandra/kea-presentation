@@ -1,0 +1,10 @@
+// kea without rails
+const routes = {
+  '/': 'homepage',
+  '/todos': 'todos',
+  '/todos/:visible': 'todos'
+}
+
+// kea-on-rails
+import routes from
+  'kea-rails-routes!../config/routes.rb'

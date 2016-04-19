@@ -1,0 +1,24 @@
+function* main() {
+  while( yield take('START_SYNC') ) {
+    const bgSyncTask = yield fork(bgSync)
+
+    yield take('STOP_SYNC')
+    yield cancel(bgSyncTask)
+  }
+}
+
+function * bgSync() {
+  try {
+    while(true) {
+      yield put(actions.requestStart())
+      const result = yield call(someApi)
+      yield put(actions.success(result))
+      yield call(delay, 5000)
+    }
+  } catch(error) {
+    if(isCancelError(error))
+      yield put(actions.failure(
+        'Sync cancelled!'
+      ))
+  }
+}

@@ -1,0 +1,9 @@
+- actions/
+  - playlists.js
+- constants/
+  - ActionTypes.js
+  - PlaylistConstants.js
+- reducers/
+  - playlists.js
+- components/
+  - Playlist.js

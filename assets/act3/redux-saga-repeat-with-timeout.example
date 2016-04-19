@@ -1,0 +1,20 @@
+function * pollForUpdates (id) {
+  while (true) {
+    const winner = yield race({
+      updates: call(api.update, id),
+      delay: call(delay, 5000)
+    })
+
+    if (winner.updates) {
+      yield put({
+        type: 'GOT_UPDATES', id, updates
+      })
+    } else {
+      yield put({
+        type: 'UPDATE_BROKE', id
+      })
+    }
+
+    yield call(delay, 10000)
+  }
+}

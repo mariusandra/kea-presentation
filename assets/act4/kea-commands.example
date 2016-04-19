@@ -1,0 +1,8 @@
+$ npm install -g kea
+
+$ kea new myappname
+
+$ cd myappname
+
+$ npm install
+$ npm start

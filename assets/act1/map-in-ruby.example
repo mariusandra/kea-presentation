@@ -1,0 +1,2 @@
+collection = ['taylor', 'abigail', 'bla']
+                .map { |s| s.upcase }

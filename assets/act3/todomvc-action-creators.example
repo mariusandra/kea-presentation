@@ -1,0 +1,5 @@
+function addTodo (todo) {
+  return { type: 'ADD_TODO', todo: todo }
+}
+
+dispatch(addTodo('some stuff'))

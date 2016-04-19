@@ -1,0 +1,14 @@
+import controller from './controller.rb'
+import { actions } from './logic.js'
+
+function * addTodo (todo) {
+  const response =
+      yield controller.addTodo({ todo: todo })
+
+  if (response.success) {
+    yield put(
+          actions.todoReceived(response.todo))
+  } else {
+    // ...
+  }
+}

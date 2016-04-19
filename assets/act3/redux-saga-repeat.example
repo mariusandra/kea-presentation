@@ -1,0 +1,11 @@
+function * pollForUpdates (id) {
+  while (true) {
+    const updates = yield call(api.update, id)
+    
+    yield put({
+      type: 'GOT_UPDATES', id, updates
+    })
+
+    yield call(delay, 10000)
+  }
+}

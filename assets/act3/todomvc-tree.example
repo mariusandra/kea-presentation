@@ -1,0 +1,15 @@
+{
+  visibilityFilter: 'SHOW_ALL',
+  todos: [
+    {
+      id: "c369114f"
+      todo: "test"
+      completed: false
+    },
+    {
+      id: "058fc39d"
+      todo: "asd"
+      completed: false
+    }
+  ]
+}

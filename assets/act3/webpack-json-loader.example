@@ -1,0 +1,4 @@
+import json from "json!./file.json"
+
+// returns the contents of file.json
+// as an object called `json`

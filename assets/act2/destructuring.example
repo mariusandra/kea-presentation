@@ -1,0 +1,18 @@
+var obj = { a: '123', b: '432' }
+
+var { a, b } = obj
+
+a === 123
+b === 432
+
+console.log(a + b)
+// 555
+
+var newObj = {
+  a,
+  b,
+  c: '345'
+}
+
+console.log(newObj)
+// { a: '123', b: '432', c: '345' }

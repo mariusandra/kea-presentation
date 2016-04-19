@@ -1,0 +1,10 @@
+import controller from './controller.rb'
+
+controller.addTodo({ todo: 'new todo '})
+          .then(response => {
+  if (response.success) {
+    console.log(response.todo.id)
+  } else {
+    console.error("damnit!")
+  }
+})

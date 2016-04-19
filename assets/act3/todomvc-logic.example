@@ -1,0 +1,44 @@
+// CONSTANTS
+export const constants = mirrorCreator([
+  'SHOW_ALL',
+  'SHOW_ACTIVE',
+  'SHOW_COMPLETED'
+])
+
+// ACTIONS
+export const actions = {
+  // tab
+  showAll: createAction('show all todos'),
+
+  // todos
+  addTodo: createAction('add todo', todo =>
+                                  ({ todo })),
+  clearCompleted: createAction('clear done')
+  // ...
+}
+
+// REDUCER
+export const reducer = combineReducers({
+  visibilityFilter: createReducer({
+    [actions.showAll]: () =>
+                      constants.SHOW_ALL,
+    [actions.showActive]: () =>
+                      constants.SHOW_ACTIVE,
+    [actions.showCompleted]: () =>
+                      constants.SHOW_COMPLETED
+  }, constants.SHOW_ALL),
+
+  todos: createReducer({
+    [actions.addTodo]: (state, payload) => {
+      return state.concat([{
+        id: createUuid(),
+        todo: payload.todo,
+        completed: false
+      }])
+    },
+    [actions.clearCompleted]: (state, _) => {
+      return state.filter(todo =>
+                            !todo.completed)
+    }
+  }, [])
+})

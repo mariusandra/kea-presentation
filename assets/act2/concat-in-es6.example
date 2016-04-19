@@ -1,0 +1,7 @@
+var name = "Bob"
+var time = "today"
+
+`Hello ${name}, how are you ${time}?`
+
+// es5
+"Hello "+name+", how are you "+time+"?"

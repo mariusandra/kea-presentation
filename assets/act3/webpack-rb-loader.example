@@ -1,0 +1,2 @@
+import methodArray from
+       "./ruby-method-loader.js!./file.rb"

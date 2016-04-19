@@ -1,0 +1,24 @@
+function reducer (state, action) {
+  if (action.type ===
+              'UPDATE_VISIBILITY_FILTER') {
+
+    return Object.assign({}, state, {
+      visibilityFilter: action.filter
+    })
+
+  }
+
+  if (action.type === 'ADD_TODO') {
+
+    return Object.assign({}, state, {
+      todos: state.todos.concat({
+        id: createUuid(),
+        todo: action.todo,
+        completed: false
+      })
+    })
+    
+  }
+
+  return state
+}

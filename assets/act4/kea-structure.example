@@ -1,0 +1,43 @@
+scenes/homepage/
+- index.js    # the react component
+- logic.js    # actions, reducers, selectors
+- saga.js     # saga
+- styles.scss # styles for this scene
+- scene.js    # one of these per scene
+
+scenes/homepage/slider/
+- _assets/    # some images
+- index.js    # the react component
+- logic.js    # actions, reducers, selectors
+- saga.js     # saga
+- styles.scss # styles for the slider
+
+scenes/todos/
+- index.js    # the react component
+- logic.js    # actions, reducers, selectors
+- saga.js     # saga
+- styles.scss # styles for this scene
+- scene.js    # one of these per scene
+
+scenes/todos/todo/
+- index.js    # the react component
+
+components/
+- header/
+  - index.js
+  - styles.scss
+
+utils/
+- create-uuid.js
+- range.js
+- delay.js
+
+scenes/
+- index.js
+- styles.scss
+
+/
+- index.html
+- index.js
+- store.js
+- routes.js

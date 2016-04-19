@@ -1,0 +1,5 @@
+var initialState = {initial: "state"}
+
+function reducer (state = initialState, action) {
+  return state
+}

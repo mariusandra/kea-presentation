@@ -1,0 +1,8 @@
+kea_bundle :homepage do
+  root to: 'scenes/homepage/#index'
+end
+
+kea_bundle :todos do
+  get 'todos' => 'scenes/todos/#index'
+  get 'todos/:visible' => 'scenes/todos/#show'
+end

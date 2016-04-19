@@ -1,0 +1,11 @@
+function HelloMessage(props) {
+  return React.createElement(
+    "div", null, "Hello ", props.name
+  );
+}
+
+ReactDOM.render(
+  React.createElement(
+    HelloMessage, { name: "Sebastian" }),
+  mountNode
+);

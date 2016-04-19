@@ -1,0 +1,51 @@
+- src/
+  - components/
+  - scenes/
+  - utils/
+
+
+
+
+
+
+- app/
+  - components/
+  - scenes/
+  - utils/
+
+  - controllers/
+  - views/
+  - mailers/
+  - assets/
+  - concepts/
+
+
+
+
+
+app/scenes/todos/
+- index.js
+- logic.js
+- saga.js
+- styles.scss
+- scene.js
+- todo/index.js
+
+
+
+
+
+app/scenes/todos/
+- controller.rb  # !!!
+- index.js
+- logic.js
+- saga.js
+- styles.scss
+- scene.js
+- todo/index.js
+
+
+
+
+
+#

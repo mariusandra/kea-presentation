@@ -1,0 +1,10 @@
+- scripts/
+  - actions/
+  - constants/
+  - reducers/
+  - components/
+  - containers/
+  - store/
+  - utils/
+- server/
+- styles/

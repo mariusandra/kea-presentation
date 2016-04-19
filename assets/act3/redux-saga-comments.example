@@ -1,0 +1,11 @@
+function * fetchUserAndPostsFromApi (id) {
+  yield put({type: 'USER_FETCH_STARTED', id})
+
+  const user = yield call(api.fetchUser, id)
+  const comments =
+            yield call(api.fetchComments, id)
+
+  yield put({
+    type: 'USER_FETCH_SUCCESS', user, comments
+  })
+}

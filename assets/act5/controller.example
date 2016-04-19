@@ -1,0 +1,35 @@
+# at scenes/todos/controller.rb
+class Scenes::Todos::Controller <
+                ApplicationController
+  include Kea::Controller
+
+  def index
+    @props = {
+      visibilityFilter: 'SHOW_ALL',
+      todos: Todos::Fetch.(
+               current_user: current_user
+             ).model
+    }
+
+    render_props_or_component
+  end
+
+  def add_todo
+    @todo = Todos::Add.(
+              current_user: current_user,
+              todo: params[:todo]
+            ).model
+
+    render json: {success: true, todo: @todo}
+  end
+
+  def remove_todo
+    Todos::Remove.(
+      current_user: current_user,
+      id: params[:id]
+    )
+
+    render json: { success: true }
+  end
+
+end

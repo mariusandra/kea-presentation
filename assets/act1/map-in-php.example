@@ -1,0 +1,7 @@
+<?php
+  $collection = collect([
+      'taylor', 'abigail', 'bla'
+    ])->map(function ($name) {
+    return strtoupper($name);
+  })
+?>

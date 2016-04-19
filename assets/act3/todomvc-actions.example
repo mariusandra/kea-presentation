@@ -1,0 +1,9 @@
+{
+  type: 'UPDATE_VISIBILITY_FILTER',
+  filter: 'SHOW_ACTIVE'
+}
+
+{
+  type: 'ADD_TODO',
+  todo: 'new todo item content here'
+}

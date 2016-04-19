@@ -1,0 +1,23 @@
+# booking.rb
+class Booking < ActiveRecord::Base
+  enums state: [
+    :submitted, :accepted, :cancelled
+  ]
+end
+
+# lesson.rb
+class Lesson < ActiveRecord::Base
+  enums status: [
+    :planned, :confirmed, :cancelled
+  ]
+end
+
+
+
+booking = Booking.find(params[:id])
+
+booking.state == :confirmed
+
+booking.lessons.filter do |lesson|
+  lesson.state == :confirmed
+end

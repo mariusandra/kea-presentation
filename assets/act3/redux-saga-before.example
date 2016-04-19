@@ -1,0 +1,10 @@
+function fetchUserAndPostsFromApi (id) {
+  dispatch({ type: 'USER_FETCH_STARTED', id }
+
+  api.fetchUser(id).then(result => {
+    dispatch({
+      type: 'USER_FETCH_SUCCESS',
+      user: result
+    })
+  })
+}
